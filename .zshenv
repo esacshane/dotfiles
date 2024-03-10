@@ -44,6 +44,7 @@ export INPUTRC="$XDG_CONFIG_HOME"/readline/inputrc
 
 # gpg -- XDG
 export GNUPGHOME="$XDG_DATA_HOME"/gnupg
+export GPG_TTY=$(tty)
 
 # less -- XDG
 export LESSHISTFILE="$XDG_CACHE_HOME"/less/history
