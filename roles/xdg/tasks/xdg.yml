@@ -1,0 +1,11 @@
+- name: Create XDG Base Directories.
+  ansible.builtin.file:
+    path: "{{ item }}"
+    mode: "0700"
+    state: directory
+  loop:
+    - ~/.config
+    - ~/.cache
+    - ~/.local
+    - ~/.local/share
+    - ~/.local/state

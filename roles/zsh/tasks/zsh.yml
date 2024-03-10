@@ -1,0 +1,14 @@
+---
+- name: Create ZShell XDG directory.
+  ansible.builtin.file:
+    path: "{{ item }}"
+    mode: "0755"
+    state: directory
+  loop:
+    - ~/.config/zsh
+
+- name: Copy .zshenv to home directory
+  ansible.builtin.copy:
+    src: .zshenv
+    dest: ~/.zshenv
+    mode: "0600"

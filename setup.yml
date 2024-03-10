@@ -1,0 +1,5 @@
+- name: Setup Development Environment
+  hosts: localhost
+  roles:
+    - xdg
+    - zsh
