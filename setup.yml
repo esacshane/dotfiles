@@ -1,5 +1,19 @@
-- name: Setup Development Environment
+---
+- name: Setup
   hosts: localhost
+  pre_tasks:
+  - name: System Identification
+    debug:
+      msg:
+        - "System: {{ ansible_system }}"
+        - "OS: {{ ansible_os_family }}"
+    when: ansible_system == "Linux"
+
   roles:
     - xdg
     - zsh
+
+  tasks:
+    - name: Completion Message.
+      debug:
+        msg: "Finished on {{ ansible_hostname }}."
