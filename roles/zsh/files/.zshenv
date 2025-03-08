@@ -5,10 +5,11 @@
 # Used for setting user's environment variables.  It should not
 # produce output or assume the shell is attached to a tty.
 
+# Environment variables on a Mac with homebrew.
 if [[ -r /usr/local/bin/brew ]]
 then
 	eval "$(/usr/local/bin/brew shellenv)"
-elif [[ -r /opt/homebrew/bin/brew shellenv ]]
+elif [[ -r /opt/homebrew/bin/brew ]]
 then
 	eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
