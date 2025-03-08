@@ -6,9 +6,16 @@
     state: directory
   loop:
     - ~/.config/zsh
+    - ~/.local/state/zsh
 
 - name: Copy .zshenv to home directory
   ansible.builtin.copy:
     src: .zshenv
     dest: ~/.zshenv
+    mode: "0600"
+
+- name: Copy .zshrc to zsh config directory
+  ansible.builtin.copy:
+    src: .zshrc
+    dest: ~/.config/zsh/.zshrc
     mode: "0600"
